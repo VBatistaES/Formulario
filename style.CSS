@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(35, 98, 194);
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: large;
+}
+
+.TextoCampos {
+    margin-left: 150px;
+}
+
+#nome {
+    margin-left: 16px;
+}
+
+#cpf {
+    margin-top: 10px;
+    margin-left: 27px;
+}
+
+#telefone {
+    margin-top: 10px;
+}
+
+#email {
+    margin-top: 10px;
+    margin-left: 17px;
+}
+
+#fundoFormulario {
+    background-color: rgb(109, 109, 243);
+    margin-right: 450px;
+    margin-left: 450px;
+    border-style: groove;
+    border-color: black;
+}
+
+#aniversario {
+    margin-top: 10px;
+}
+
+#TextoFinal {
+    margin-top: 30px;
+    text-align: center;
+    font-size: larger;
+}
