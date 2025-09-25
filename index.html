@@ -15,16 +15,15 @@
     <h2>Atenção</h2>
     <p>Utilize dados fictícios para o preenchimento do site!</p>
     <div id="fundoFormulario"><br><br>
-        <span class="TextoCampos" id="Nometexto">Nome:</span><input type="text" value="" id="nome" class="teste1"><input
-            type="button" value="Salvar" id="SalvarNome" onclick="SalvarNome()"><br>
-        <span class="TextoCampos" id="CPFTexto">CPF:</span><input type="text" value="" id="cpf"><input type="button"
-            value="Salvar" id="SalvarCPF" onclick="SalvarCPF()"> <br>
+        <span class="TextoCampos" id="Nometexto">Nome:</span><input type="text" value="" id="nome" class="teste1"><br>
+        <span class="TextoCampos" id="CPFTexto">CPF:</span><input type="text" value="" id="cpf"><br>
         <span class="TextoCampos" id="Telefonetexto">Telefone:</span><input type="tel" id="telefone"
-            placeholder="00 8998-8998"><input type="button" value="Salvar" onclick="SalvarTelefone()"><br>
-        <span class="TextoCampos" id="Aniversariotexto">Aniversário:</span><input type="date" id="aniversario"><input
-            type="button" value="Salvar" onclick="SalvarAniversario()"><br>
+            placeholder="00 8998-8998"><br>
+        <span class="TextoCampos" id="Aniversariotexto">Aniversário:</span><input type="date" id="aniversario"><br>
         <span class="TextoCampos" id="Emailtexto">Email:</span><input type="email" id="email"
-            placeholder="teste123@gmail.com"><input type="button" value="Salvar" onclick="SalvarEmail()"><br><br><br>
+            placeholder="teste123@gmail.com"><br><input type="button" id="SalvarTudo" value="Salvar"
+            onclick="SalvarTudo()">
+        <input type="button" id="Limpar" value="Limpar" onclick="Limpar()">
     </div>
     <div id="TextoFinal"></div>
 

@@ -16,17 +16,8 @@ p {
     font-size: large;
 }
 
-.TextoCampos {
-    margin-left: 150px;
-}
-
-#nome {
-    margin-left: 16px;
-}
-
 #cpf {
     margin-top: 10px;
-    margin-left: 27px;
 }
 
 #telefone {
@@ -35,14 +26,20 @@ p {
 
 #email {
     margin-top: 10px;
-    margin-left: 17px;
 }
 
 #fundoFormulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 450px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(109, 109, 243);
-    margin-right: 450px;
-    margin-left: 450px;
     border-style: groove;
+    border-radius: 20px;
     border-color: black;
 }
 
@@ -54,4 +51,19 @@ p {
     margin-top: 30px;
     text-align: center;
     font-size: larger;
+}
+
+#SalvarTudo {
+    border-style: groove;
+    border-radius: 25px;
+    height: 35px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+#Limpar {
+    border-style: groove;
+    border-radius: 25px;
+    height: 35px;
+    width: 100px;
 }
