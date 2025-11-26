@@ -1,50 +1,57 @@
-function SalvarTudo() {//salva todos os dados fornecidos e faz a conferencia.
-    let nome = document.getElementById('nome').value;
-    let cpf = document.getElementById('cpf').value;
-    let cpfSeparado = cpf.length;//separa o cpf dígito por dígito.
-    let telefone = document.getElementById('telefone').value;
-    let aniversario = document.getElementById('aniversario').value;
-    let email = document.getElementById('email').value;
-    let TextoFinal = document.getElementById('TextoFinal');
-    if (nome === '') {
-        window.alert('Digite um nome');
-    }
-    else if (/^[0-9]+$/.test(nome)) { //verifica se no nome não há números.
-        window.alert(`O nome ${nome} Não e um nome! Por favor digitar um nome.`)
-    }
-    else if (cpfSeparado != 11) { //verifica se o cpf separado e diferente de 11 dígitos
-        window.alert(`O CPF ${cpf} esta incorreto!`)
-        window.alert('O número valido para CPF deve conter 11 Dígitos.')
-    }
-    else if (/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/.test(cpf)) {//verifca se no cpf não há nenhuma letra.
-        window.alert('O CPF não pode conter letras!')
-    }
-    else if (telefone === '') {
-        window.alert('O Campo "Telefone" esta vazio.')
-    }
-    else if (aniversario === '') {
-        window.alert('O campo "Aniversário" esta vazio.')
-    }
-    else if (email === '') {
-        window.alert('O campo de e-mail está vazio!');
-    }
-    else {
-        TextoFinal.innerHTML = `Olá ${nome}! Seu CPF é: ${cpf}, seu telefone é: ${telefone}, sua data de aniversário é: ${aniversario} e seu email é: ${email}`;
-    }
+function pegar(id) {
+    return document.getElementById(id);
 }
 
-function Limpar() {//limpa os dados digitados.
-    let nome = document.getElementById('nome');
-    let cpf = document.getElementById('cpf');
-    let telefone = document.getElementById('telefone');
-    let aniversario = document.getElementById('aniversario');
-    let email = document.getElementById('email');
-    let TextoFinal = document.getElementById('TextoFinal');
+function SalvarTudo() {
+    const nome = pegar('nome').value.trim();
+    const cpf = pegar('cpf').value.trim();
+    const telefone = pegar('telefone').value.trim();
+    const aniversario = pegar('aniversario').value.trim();
+    const email = pegar('email').value.trim();
+    const TextoFinal = pegar('TextoFinal');
 
-    nome.value = "";//atualiza os valores que estão preenchidos com vazio.
-    cpf.value = "";
-    telefone.value = "";
-    aniversario.value = "";
-    email.value = "";
-    TextoFinal.innerText = "";
+    // ======= VALIDAÇÕES =======
+
+    if (!nome) {
+        return alert('Digite um nome.');
+    }
+
+    if (/^[0-9]+$/.test(nome)) {
+        return alert(`"${nome}" não é um nome válido. Digite apenas letras.`);
+    }
+
+    if (cpf.length !== 11) {
+        return alert('O CPF deve conter exatamente 11 dígitos numéricos.');
+    }
+
+    if (!/^[0-9]+$/.test(cpf)) {
+        return alert('O CPF não pode conter letras ou símbolos.');
+    }
+
+    if (!telefone) {
+        return alert('O campo "Telefone" está vazio.');
+    }
+
+    if (!aniversario) {
+        return alert('O campo "Aniversário" está vazio.');
+    }
+
+    if (!email) {
+        return alert('O campo "Email" está vazio.');
+    }
+
+    // ======= RESULTADO FINAL =======
+    TextoFinal.innerHTML =
+        `Olá <strong>${nome}</strong>!<br>
+        Seu CPF: <strong>${cpf}</strong><br>
+        Telefone: <strong>${telefone}</strong><br>
+        Aniversário: <strong>${aniversario}</strong><br>
+        Email: <strong>${email}</strong>`;
+}
+
+function Limpar() {
+    const campos = ['nome', 'cpf', 'telefone', 'aniversario', 'email'];
+    campos.forEach(id => pegar(id).value = "");
+
+    pegar('TextoFinal').innerHTML = "";
 }
