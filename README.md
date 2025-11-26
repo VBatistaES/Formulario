@@ -1,6 +1,6 @@
 # 📝 Formulário Simples em HTML e CSS
 
-Este projeto é um **formulário estilizado** desenvolvido com **HTML e CSS**, ideal para treinar estruturação de páginas, estilização e boas práticas no desenvolvimento front-end.
+Este projeto é um **formulário estilizado** desenvolvido com **HTML , CSS, JS**, ideal para treinar estruturação de páginas, estilização e boas práticas no desenvolvimento front-end.
 
 O formulário contém campos básicos e um layout limpo, servindo como base para projetos maiores.
 
@@ -20,7 +20,7 @@ O formulário contém campos básicos e um layout limpo, servindo como base para
 
 * **HTML5**
 * **CSS3**
-
+* **JS**
 ---
 
 ## 📂 Estrutura do projeto
@@ -30,6 +30,7 @@ O formulário contém campos básicos e um layout limpo, servindo como base para
  ┣ 📜 index.html      # Estrutura principal do formulário
  ┣ 📜 style.css       # Estilos e layout da página
  ┗ 📜 README.md       # Documentação
+ ┗ 📜 App.js          # Backend
 ```
 
 ---
